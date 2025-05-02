@@ -26,10 +26,7 @@
       sizes="16x16"
       href="/assets/icons/favicon-16x16.png"
     />
-    <link
-      rel="manifest"
-      href="/assets/icons/manifest.json"
-    />
+    <link rel="manifest" href="/assets/icons/manifest.json" />
     <meta name="msapplication-TileColor" content="#001705" />
     <meta name="theme-color" content="#001705" />
     <script src="../unpkg.com/%40lottiefiles/lottie-player%402.0.12/dist/lottie-player.js"></script>
@@ -45,7 +42,10 @@
     <link rel="canonical" href="/index.html" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="IPSS - Powering Business Growth with Intelligent Outsourcing" />
+    <meta
+      property="og:title"
+      content="IPSS - Powering Business Growth with Intelligent Outsourcing"
+    />
     <meta
       property="og:description"
       content="Where Scale Meets Soul More than being global leaders in customer care outsourcing, we are [&hellip;]"
@@ -1191,14 +1191,52 @@
                         src="wp-content/uploads/2022/12/Homepage_Hero-image-Where-Scale-Meets-Soul-1.png"
                         alt="A woman working with some excited coworkers in a high-energy office environment"
                       />
+                      <style>
+                        @media only screen and (min-width: 1536px) {
+                          .ipss-heading {
+                            font-size: 3rem;
+                          }
+                        }
+
+                        @media (min-width: 600px) and (max-width: 1280px) {
+                          .ipss-heading {
+                            font-size: 2rem;
+                          }
+                        }
+
+                        @media (min-width: 600px) and (max-width: 1279px) {
+                          .heading-padding {
+                            padding-bottom: 70px;
+                          }
+                        }
+
+                        @media (min-width: 401px) and (max-width: 599px) {
+                          .ipss-heading {
+                            font-size: 1.5rem;
+                          }
+                        }
+
+                        @media (min-width: 355px) and (max-width: 599px) {
+                          .heading-padding {
+                            padding-bottom: 160px;
+                          }
+                        }
+
+                        @media only screen and (max-width: 400px) {
+                          .ipss-heading {
+                            font-size: 1.25rem;
+                            line-height: unset;
+                          }
+                        }
+                      </style>
                       <div
-                        class="px-6 md:px-[8vw] pb-[91px] md:pb-[184px] xl:pb-[120px] 2xl:pb-[18vh] relative z-10"
+                        class="heading-padding px-6 md:px-[8vw] pb-[91px] md:pb-[184px] xl:pb-[120px] 2xl:pb-[18vh] relative z-10"
                       >
                         <div
                           class="flex flex-col md:max-w-[558px] xl:max-w-[50vw]"
                         >
                           <h1
-                            class="text-spring-wood [&>span]:text-green font-bold text-4xl md:text-40 xl:text-[3.5vw] 2xl:text-96 mb-[9px] md:mb-[23px] 2xl:mb-[29px]"
+                            class="ipss-heading text-spring-wood [&>span]:text-green font-bold text-4xl md:text-40 xl:text-[3.5vw] 2xl:text-96 mb-[9px] md:mb-[23px] 2xl:mb-[29px]"
                           >
                             IPSS Global Pvt Ltd –
                             <span class="text-green"
@@ -2075,7 +2113,7 @@
                             Our Clients
                           </div>
                           <div
-                            class="text-spring-wood md:text-xl md:mb-[74px] xl:max-w-[765px] leading-[1.5625] xl:text-2xl"
+                            class="text-spring-wood md:text-xl mb-10 md:mb-10 xl:max-w-[765px] leading-[1.5625] xl:text-2xl"
                           >
                             We take pride in working with global leaders and
                             fast-growing businesses across EdTech, FinTech,
@@ -2084,11 +2122,181 @@
                             cost-effective outsourcing solutions tailored to
                             their needs
                           </div>
+                          <style>
+                            .marquee-container {
+                              width: 100%;
+                              overflow: hidden;
+                              padding: 20px 0;
+                              position: relative;
+                              margin-bottom: 4rem;
+                            }
+
+                            .marquee-content {
+                              display: flex;
+                              animation: marquee 20s linear infinite;
+                              white-space: nowrap;
+                            }
+                            .client-item {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              padding: 15px 30px;
+                              margin: 0 20px;
+                              background-color: #f8f8f5;
+                              border-radius: 8px;
+                              min-width: 200px;
+                              height: 80px;
+                            }
+                            .client-item img {
+                              max-width: 100%;
+                              max-height: 50px;
+                              object-fit: contain;
+                            }
+                            @keyframes marquee {
+                              0% {
+                                transform: translateX(0);
+                              }
+                              100% {
+                                transform: translateX(-50%);
+                              }
+                            }
+                            .marquee-content {
+                              width: 200%;
+                            }
+
+                            .logo-group {
+                              display: flex;
+                              width: 50%;
+                              margin: 0 4rem;
+                            }
+                            /* Pause animation on hover */
+                            .marquee-container:hover .marquee-content {
+                              animation-play-state: paused;
+                            }
+
+                            @media (max-width: 768px) {
+                              .marquee-content {
+                                animation-duration: 25s; /* Faster animation on mobile */
+                              }
+
+                              .client-item {
+                                min-width: 120px; /* Even smaller width on mobile */
+                                padding: 10px 15px;
+                                margin: 0 10px;
+                              }
+                            }
+
+                            /* Triple the logos for very small screens */
+                            @media (max-width: 480px) {
+                              .marquee-content {
+                                width: 300%; /* Triple the content width */
+                              }
+
+                              .logo-group {
+                                width: 33.333%; /* Each group takes 1/3 of the space */
+                              }
+
+                              .client-item {
+                                min-width: 100px;
+                                margin: 0 5px;
+                              }
+                            }
+                          </style>
+                          <div class="marquee-container">
+                            <div class="marquee-content">
+                              <!-- First set of logos -->
+                              <div class="logo-group">
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/learningo.png"
+                                    alt="LearningGo"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/codingal.svg"
+                                    alt="Codingal"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/codeyoung.webp"
+                                    alt="CodeYoung"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/worldotutor.png"
+                                    alt="WorldOTutor"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/playto.svg"
+                                    alt="SkyFilabs"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/planetspark.webp"
+                                    alt="PlanetSpark"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Duplicate logos to create continuous flow -->
+                              <div class="logo-group">
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/learningo.png"
+                                    alt="LearningGo"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/codingal.svg"
+                                    alt="Codingal"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/codeyoung.webp"
+                                    alt="CodeYoung"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/worldotutor.png"
+                                    alt="WorldOTutor"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/playto.svg"
+                                    alt="SkyFilabs"
+                                  />
+                                </div>
+                                <div class="client-item">
+                                  <img
+                                    src="/assets/planetspark.webp"
+                                    alt="PlanetSpark"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <h2
-                            class="mt-2 text-spring-wood font-black text-2xl md:text-53 xl:text-6xl 2xl:text-80 mb-[6px] leading-[1.16] xl:mb-[23px]"
+                            class="mt-2 text-spring-wood subheading subheading--border self-start uppercase md:text-xl xl:text-2xl font-bold mb-[6px] md:mb-[14px] leading-[1.5625]"
                           >
                             Industries We Serve:
                           </h2>
+                          <p
+                            class="text-spring-wood md:text-xl md:mb-[74px] xl:max-w-[765px] leading-[1.5625] xl:text-2xl"
+                          >
+                            At IPSS Global Pvt. Ltd., we deliver cutting-edge,
+                            scalable, and cost-efficient outsourcing solutions
+                            tailored to diverse industries. Our expertise spans:
+                          </p>
                         </div>
                       </div>
                       <div
@@ -2139,11 +2347,10 @@
                           <div class="hidden xl:block xl:w-[670px] xl:mx-auto">
                             <div class="tmb-wrapper flex flex-col">
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Retail-Digital-Commerce-Desktop.png"
                               >
-                                <a
-                                  href="#!"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Retail & Digital Commerce"
                                 >
@@ -2153,7 +2360,7 @@
                                     src="wp-content/uploads/2025/03/Icon-Entertainment-Gaming-Media.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
                                   >EdTech
@@ -2164,11 +2371,10 @@
                                 >
                               </div>
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Travel-Transportation-Desktop.png"
                               >
-                                <a
-                                  href="ecosystems/travel-transportation/index.html"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Travel & Transportation"
                                 >
@@ -2178,7 +2384,7 @@
                                     src="wp-content/uploads/2025/03/Icon-Financial-Services-Fintech.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
                                   >FinTech</span
@@ -2189,11 +2395,10 @@
                                 >
                               </div>
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Consumer-Technology-Desktop.png"
                               >
-                                <a
-                                  href="ecosystems/consumer-technology/index.html"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Consumer Technology"
                                 >
@@ -2203,7 +2408,7 @@
                                     src="wp-content/uploads/2025/03/Icon-Consumer-Technology.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
                                   >Gaming</span
@@ -2214,11 +2419,10 @@
                                 >
                               </div>
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Entertainment-Gaming-Media-Desktop.png"
                               >
-                                <a
-                                  href="ecosystems/entertainment-gaming-media/index.html"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Entertainment, Gaming & Media"
                                 >
@@ -2228,7 +2432,7 @@
                                     src="wp-content/uploads/2025/03/Icon-Entertainment-Gaming-Media.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
                                   >SaaS <br />& Tech</span
@@ -2239,11 +2443,10 @@
                                 >
                               </div>
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Utilities-Energy-Home-Services-Other-Desktop.png"
                               >
-                                <a
-                                  href="ecosystems/utilities-energy-home-services-other/index.html"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Utilities, Energy, Home Services & Other"
                                 >
@@ -2253,7 +2456,7 @@
                                     src="wp-content/uploads/2025/03/Icon-Retail-Digital-Commerce.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
                                   >E-commerce <br />& Retail</span
@@ -2264,13 +2467,33 @@
                                 >
                               </div>
                               <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
                                 data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Health-Wellness-Desktop.png"
                               >
-                                <a
-                                  href="ecosystems/health-wellness/index.html"
+                                <div
                                   class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
                                   aria-label="Health & Wellness"
+                                >
+                                  <img
+                                    decoding="async"
+                                    class="rounded-full w-[180px]"
+                                    src="wp-content/uploads/2025/03/Icon-Consumer-Technology.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <span
+                                  class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
+                                  >Content Moderation & Brand Safety</span
+                                >
+                                <!-- <span>Safeguarding digital platforms through AI-driven and human-powered monitoring.</span> -->
+                              </div>
+                              <div
+                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center"
+                                data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Financial-Services-Fintech-Desktop.png"
+                              >
+                                <div
+                                  class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
+                                  aria-label="Financial Services & Fintech"
                                 >
                                   <img
                                     decoding="async"
@@ -2278,32 +2501,12 @@
                                     src="wp-content/uploads/2025/03/Icon-Health-Wellness.svg"
                                     alt=""
                                   />
-                                </a>
+                                </div>
                                 <span
                                   class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
-                                  >Health & Wellness</span
+                                  >Customer Service & Sales</span
                                 >
-                              </div>
-                              <div
-                                class="tmb-wrapper__item flex flex-col xl:flex-row odd:xl:flex-row-reverse [&>span]:odd:xl:text-right justify-center xl:justify-start xl:items-center xl:cursor-pointer"
-                                data-img="https://www.intouchcx.com/wp-content/uploads/2025/03/Financial-Services-Fintech-Desktop.png"
-                              >
-                                <a
-                                  href="ecosystems/financial-services-fintech/index.html"
-                                  class="flex items-center justify-center self-center flex-shrink-0 mt-2 xl:mt-0 w-[210px] h-[210px]"
-                                  aria-label="Financial Services & Fintech"
-                                >
-                                  <img
-                                    decoding="async"
-                                    class="rounded-full w-[180px]"
-                                    src="wp-content/uploads/2025/03/Icon-Financial-Services-Fintech.svg"
-                                    alt=""
-                                  />
-                                </a>
-                                <span
-                                  class="font-bold xl:font-medium text-[22px] xl:text-32 2xl:text-32 leading-none xl:leading-[1.2] uppercase text-center text-spring-wood"
-                                  >Financial Services & Fintech</span
-                                >
+                                <!-- <span>Elevating user experience with 24/7 multilingual support and revenue-focused sales teams.</span> -->
                               </div>
                             </div>
                           </div>
@@ -2483,7 +2686,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/retail-digital-commerce/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Retail &amp; Digital Commerce"
                                   >
@@ -2504,7 +2707,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/travel-transportation/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Travel &amp; Transportation"
                                   >
@@ -2525,7 +2728,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/consumer-technology/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Consumer Technology"
                                   >
@@ -2546,7 +2749,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/entertainment-gaming-media/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Entertainment, Gaming &amp; Media"
                                   >
@@ -2567,7 +2770,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/utilities-energy-home-services-other/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Utilities, Energy, Home Services &amp; Other"
                                   >
@@ -2588,7 +2791,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/health-wellness/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Health &amp; Wellness"
                                   >
@@ -2601,7 +2804,7 @@
                                   </a>
                                   <span
                                     class="font-bold md:font-bold md:text-[22px] leading-none uppercase text-center text-spring-wood mt-[42px]"
-                                    >Health &amp; Wellness</span
+                                    >Content Moderation & Brand Safety</span
                                   >
                                 </div>
                                 <div
@@ -2609,7 +2812,7 @@
                                   style="margin-right: 26px"
                                 >
                                   <a
-                                    href="https://www.intouchcx.com/ecosystems/financial-services-fintech/"
+                                    href="#!"
                                     class="grid place-content-center self-center rounded-full flex-shrink-0 w-[120px] h-[120px] md:w-[122px] md:h-[122px]"
                                     aria-label="Financial Services &amp; Fintech"
                                   >
@@ -2622,7 +2825,7 @@
                                   </a>
                                   <span
                                     class="font-bold md:font-bold md:text-[22px] leading-none uppercase text-center text-spring-wood mt-[42px]"
-                                    >Financial Services &amp; Fintech</span
+                                    >Customer Service & Sales</span
                                   >
                                 </div>
                               </div>
@@ -2666,332 +2869,8 @@
           </div>
         </div>
       </section>
-      <!-- <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-06accae elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="06accae"
-        data-element_type="section"
-      >
-        <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-737336b"
-            data-id="737336b"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-4919ade elementor-widget elementor-widget-ICXM05"
-                data-id="4919ade"
-                data-element_type="widget"
-                data-widget_type="ICXM05.default"
-              >
-                <div class="elementor-widget-container">
-                  <div
-                    class="py-14 md:pb-[116px] px-6 md:px-16 xl:px-[8vw] bg-deep-fir overflow-x-clip relative z-10"
-                  >
-                    <img
-                      decoding="async"
-                      class="pointer-events-none hidden md:block absolute right-0 top-28 xl:top-48"
-                      src="wp-content/themes/intouchcx/assets/images/widgets/icxm5/icxm05_wave_yellow.svg"
-                      alt=""
-                    />
-                    <div class="flex flex-col relative z-10">
-                      <div
-                        class="text-spring-wood subheading subheading--border self-start uppercase md:text-xl xl:text-2xl font-bold mb-[6px] md:mb-[14px] leading-[1.5625]"
-                      >
-                        Join Our Team
-                      </div>
-                      <h2
-                        class="text-2xl font-bold md:text-53 2xl:text-80 mt-5 text-spring-wood md:mb-[10px] 2xl:mb-6"
-                      >
-                        Join the future of customer support.
-                      </h2>
-                      <div
-                        class="text-base md:text-xl md:leading-[32px] xl:text-2xl mt-5 text-spring-wood xl:max-w-[733px]"
-                      >
-                        We take advantage of opportunities and face challenges
-                        head on, and our culture reflects that. From
-                        leading-edge campuses to advanced development trainings,
-                        we’re here to help you grow your career.
-                      </div>
-                      <div
-                        class="flex space-x-[24px] mt-8 md:mt-[45px] 2xl:mt-[90px]"
-                      >
-                        <a
-                          href="locations/campuses/index.html"
-                          class="px-[33px] py-3 bg-bright-sun text-black rounded text-18 font-bold text-center md:text-20 md:font-medium"
-                        >
-                          Campuses
-                        </a>
-                        <a
-                          href="careers/index.html"
-                          class="px-[33px] py-3 border border-white text-spring-wood text-18 font-bold rounded text-center md:text-20 md:font-medium"
-                        >
-                          Apply Now
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-8532c33 elementor-widget elementor-widget-hotspot"
-                data-id="8532c33"
-                data-element_type="widget"
-                data-settings='{"hotspot":[{"_id":"c5a2556","hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2&gt;North America&lt;\/h2&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Winnipeg&lt;\/li&gt;&lt;li&gt;Denver&lt;\/li&gt;&lt;li&gt;Las Vegas&lt;\/li&gt;&lt;li&gt;Phoenix&lt;\/li&gt;&lt;li&gt;Orlando&lt;\/li&gt;&lt;li&gt;Mexico&lt;\/li&gt;&lt;\/ul&gt;&lt;\/div&gt;","hotspot_offset_x":{"unit":"%","size":25,"sizes":[]},"hotspot_offset_y":{"unit":"%","size":27,"sizes":[]},"hotspot_offset_x_tablet":{"unit":"px","size":15,"sizes":[]},"hotspot_offset_x_mobile":{"unit":"px","size":26,"sizes":[]},"hotspot_offset_y_tablet":{"unit":"px","size":27,"sizes":[]},"hotspot_offset_y_mobile":{"unit":"px","size":14,"sizes":[]},"hotspot_link":{"url":"\/locations\/campuses\/north-america\/","is_external":"","nofollow":"","custom_attributes":""},"hotspot_label":"North America","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null},{"hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2 style=\"color: #f5333f;\"&gt;Latin America&lt;\/h2&gt;\n&lt;div&gt;\n&lt;ul&gt;\n \t&lt;li&gt;Bogota&lt;\/li&gt;\n \t&lt;li&gt;Guatemala City&lt;\/li&gt;\n \t&lt;li&gt;Tegucigalpa&lt;\/li&gt;\n \t&lt;li&gt;San Pedro Sula&lt;\/li&gt;\n&lt;\/ul&gt;\n&lt;\/div&gt;","hotspot_offset_x":{"unit":"%","size":30,"sizes":[]},"hotspot_offset_y":{"unit":"%","size":62,"sizes":[]},"_id":"2dcf984","hotspot_offset_x_tablet":{"unit":"px","size":25,"sizes":[]},"hotspot_offset_x_mobile":{"unit":"px","size":31,"sizes":[]},"hotspot_offset_y_tablet":{"unit":"px","size":62,"sizes":[]},"hotspot_offset_y_mobile":{"unit":"px","size":66,"sizes":[]},"hotspot_link":{"url":"\/locations\/campuses\/latin-america\/","is_external":"","nofollow":"","custom_attributes":""},"hotspot_label":"Latin America","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null},{"hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2 style=\"color: #169968;\"&gt;Caribbean&lt;\/h2&gt;\n&lt;div&gt;\n&lt;ul&gt;\n \t&lt;li&gt;Montego Bay&lt;\/li&gt;\n \t&lt;li&gt;Kingston&lt;\/li&gt;\n&lt;\/ul&gt;\n&lt;\/div&gt;","hotspot_offset_x":{"unit":"%","size":29,"sizes":[]},"hotspot_offset_y":{"unit":"%","size":39,"sizes":[]},"hotspot_offset_x_tablet":{"unit":"px","size":25,"sizes":[]},"hotspot_offset_x_mobile":{"unit":"px","size":31,"sizes":[]},"hotspot_offset_y_tablet":{"unit":"px","size":62,"sizes":[]},"hotspot_offset_y_mobile":{"unit":"px","size":66,"sizes":[]},"hotspot_link":{"url":"\/locations\/campuses\/caribbean","is_external":"","nofollow":"","custom_attributes":""},"hotspot_label":"Caribbean","_id":"d2b08ba","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null},{"hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2 style=\"color: #fc805f;\"&gt;Asia Pacific&lt;\/h2&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Cebu&lt;\/li&gt;&lt;li&gt;Clark&lt;\/li&gt;&lt;li&gt;Manila&lt;\/li&gt;&lt;li&gt;Kuala Lumpur&lt;\/li&gt;&lt;li&gt;Bengaluru&lt;\/li&gt;&lt;li&gt;Hyderabad&lt;\/li&gt;&lt;\/ul&gt;&lt;\/div&gt;","hotspot_offset_x":{"unit":"%","size":78,"sizes":[]},"hotspot_offset_y":{"unit":"%","size":49,"sizes":[]},"_id":"d9a178f","hotspot_offset_x_tablet":{"unit":"px","size":81,"sizes":[]},"hotspot_offset_x_mobile":{"unit":"px","size":78,"sizes":[]},"hotspot_offset_y_tablet":{"unit":"px","size":48,"sizes":[]},"hotspot_offset_y_mobile":{"unit":"px","size":49,"sizes":[]},"hotspot_link":{"url":"\/locations\/campuses\/asia-pacific\/","is_external":"","nofollow":"","custom_attributes":""},"hotspot_label":"Asia Pacific","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null},{"hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2 style=\"color: #4de467;\"&gt;Europe&lt;\/h2&gt;\n&lt;ul&gt;\n \t&lt;li&gt;Athens&lt;\/li&gt;\n&lt;\/ul&gt;","hotspot_offset_y":{"unit":"%","size":21,"sizes":[]},"_id":"1191192","hotspot_offset_x_tablet":{"unit":"px","size":56,"sizes":[]},"hotspot_offset_x_mobile":{"unit":"px","size":51,"sizes":[]},"hotspot_offset_y_tablet":{"unit":"px","size":18,"sizes":[]},"hotspot_offset_y_mobile":{"unit":"px","size":11,"sizes":[]},"hotspot_link":{"url":"\/locations\/campuses\/europe\/","is_external":"","nofollow":"","custom_attributes":""},"hotspot_label":"Europe","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null},{"_id":"b34b38e","hotspot_label":"Africa","hotspot_link":{"url":"\/locations\/campuses\/africa\/","is_external":"","nofollow":"","custom_attributes":""},"hotspot_icon":{"value":{"url":"https:\/\/www.intouchcx.com\/wp-content\/uploads\/2022\/12\/Group-282248.svg","id":713},"library":"svg"},"hotspot_tooltip_content":"&lt;h2 style=\"color: #f3f1e5;\"&gt;Africa&lt;\/h2&gt;\n&lt;ul&gt;\n \t&lt;li&gt;Cairo&lt;\/li&gt;\n&lt;\/ul&gt;","hotspot_custom_size":"no","hotspot_horizontal":"left","hotspot_vertical":"top","hotspot_tooltip_position":"no","hotspot_position":null}],"tooltip_trigger":"mouseenter","hotspot_sequenced_animation":"no","tooltip_position":"top","tooltip_animation":"e-hotspot--fade-in-out"}'
-                data-widget_type="hotspot.default"
-              >
-                <div class="elementor-widget-container">
-                  <img
-                    fetchpriority="high"
-                    decoding="async"
-                    width="8000"
-                    height="4500"
-                    src="wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01.png"
-                    class="attachment-full size-full wp-image-4107"
-                    alt="World map"
-                    srcset="
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01.png           8000w,
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01-300x169.png    300w,
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01-1024x576.png  1024w,
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01-768x432.png    768w,
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01-1536x864.png  1536w,
-                      https://www.intouchcx.com/wp-content/uploads/2024/02/Mapa-za-Animaciju-2024-NEW-01-2048x1152.png 2048w
-                    "
-                    sizes="(max-width: 8000px) 100vw, 8000px"
-                  />
-                  <a
-                    class="e-hotspot elementor-repeater-item-c5a2556 e-hotspot--position-left e-hotspot--position-top e-hotspot--link"
-                    href="locations/campuses/north-america/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">North America</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2>North America</h2>
-                      <div>
-                        <ul>
-                          <li>Winnipeg</li>
-                          <li>Denver</li>
-                          <li>Las Vegas</li>
-                          <li>Phoenix</li>
-                          <li>Orlando</li>
-                          <li>Mexico</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="e-hotspot elementor-repeater-item-2dcf984 e-hotspot--position-left e-hotspot--position-top e-hotspot--link"
-                    href="locations/campuses/latin-america/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">Latin America</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2 style="color: #f5333f">Latin America</h2>
-                      <div>
-                        <ul>
-                          <li>Bogota</li>
-                          <li>Guatemala City</li>
-                          <li>Tegucigalpa</li>
-                          <li>San Pedro Sula</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="e-hotspot elementor-repeater-item-d2b08ba e-hotspot--position-left e-hotspot--position-top e-hotspot--link"
-                    href="locations/campuses/caribbean/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">Caribbean</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2 style="color: #169968">Caribbean</h2>
-                      <div>
-                        <ul>
-                          <li>Montego Bay</li>
-                          <li>Kingston</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="e-hotspot elementor-repeater-item-d9a178f e-hotspot--position-left e-hotspot--position-top e-hotspot--link"
-                    href="locations/campuses/asia-pacific/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">Asia Pacific</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2 style="color: #fc805f">Asia Pacific</h2>
-                      <div>
-                        <ul>
-                          <li>Cebu</li>
-                          <li>Clark</li>
-                          <li>Manila</li>
-                          <li>Kuala Lumpur</li>
-                          <li>Bengaluru</li>
-                          <li>Hyderabad</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </a>
-                  <a
-                    class="e-hotspot elementor-repeater-item-1191192 e-hotspot--position-top e-hotspot--link"
-                    href="locations/campuses/europe/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">Europe</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2 style="color: #4de467">Europe</h2>
-                      <ul>
-                        <li>Athens</li>
-                      </ul>
-                    </div>
-                  </a>
-                  <a
-                    class="e-hotspot elementor-repeater-item-b34b38e e-hotspot--link"
-                    href="locations/campuses/africa/index.html"
-                  >
-                    <div class="e-hotspot__button">
-                      <div class="e-hotspot__icon">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="51"
-                          height="59"
-                          viewBox="0 0 51 59"
-                          fill="none"
-                        >
-                          <path
-                            d="M50.25 24.7752C50.25 43.048 25.1225 58.9996 25.1225 58.9996C25.1225 58.9996 0 42.5788 0 24.7752C0.0925701 18.1727 2.78039 11.8719 7.48218 7.23556C12.184 2.59923 18.5218 0 25.125 0C31.7282 0 38.066 2.59923 42.7678 7.23556C47.4696 11.8719 50.1574 18.1727 50.25 24.7752Z"
-                            fill="#4CE467"
-                          ></path>
-                          <path
-                            d="M25.1223 34.7954C31.0082 34.7954 35.7797 30.0239 35.7797 24.1379C35.7797 18.252 31.0082 13.4805 25.1223 13.4805C19.2363 13.4805 14.4648 18.252 14.4648 24.1379C14.4648 30.0239 19.2363 34.7954 25.1223 34.7954Z"
-                            fill="#001705"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div class="e-hotspot__label">Africa</div>
-                    </div>
-                    <div
-                      class="e-hotspot__tooltip e-hotspot--tooltip-position e-hotspot--fade-in-out"
-                    >
-                      <h2 style="color: #f3f1e5">Africa</h2>
-                      <ul>
-                        <li>Cairo</li>
-                      </ul>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- <section
+
+      <section
         class="elementor-section elementor-top-section elementor-element elementor-element-5918918 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
         data-id="5918918"
         data-element_type="section"
@@ -3013,13 +2892,13 @@
                   <div class="bg-spring-wood overflow-x-clip">
                     <img
                       decoding="async"
-                      class="pointer-events-none md:hidden absolute right-0 top-[-57px]"
+                      class="pointer-events-none md:hidden absolute left-0 top-[-57px]"
                       src="wp-content/themes/intouchcx/assets/images/widgets/icxm06/mobile_pack_graph_04.svg"
                       alt=""
                     />
                     <img
                       decoding="async"
-                      class="pointer-events-none hidden md:block absolute right-0 top-[-98px]"
+                      class="pointer-events-none hidden md:block absolute left-0 top-[-98px]"
                       src="wp-content/themes/intouchcx/assets/images/widgets/icxm06/tablet_pack_graph_03.svg"
                       alt=""
                     />
@@ -3029,39 +2908,53 @@
                       src="wp-content/themes/intouchcx/assets/images/widgets/icxm06/icmx06_vector_green.png"
                       alt=""
                     />
+                    <style>
+                      .testi-container {
+                        padding-bottom: 159px;
+                      }
+
+                      @media (max-width: 767px) {
+                        .testi-container {
+                          padding-bottom: 57px;
+                        }
+                      }
+                    </style>
                     <div
-                      class="flex flex-col px-6 md:px-[8vw] pt-[57px] xl:pt-[146px] relative"
+                      class="testi-container flex flex-col px-6 md:px-[8vw] pt-[57px] xl:pt-[146px] relative"
                     >
                       <div
                         class="subheading subheading--border self-start uppercase md:text-xl xl:text-2xl font-bold mb-[6px] md:mb-[14px] leading-[1.5625]"
                       >
-                        Our Culture
+                        Client Testimonials
                       </div>
                       <h3
-                        class="heading--font mt-[6px] text-24 font-black md:text-53 2xl:text-80"
-                        style="font-size: {{ settings.heading_font_size.size }}{{ settings.heading_font_size.unit }}; line-height:1.3;"
+                        class="mt-[6px] text-24 font-black md:text-40 2xl:text-80"
+                        style="line-height: 1.3"
                       >
-                        We’re redefining CX, not only through our technology but
-                        through our people.
+                        “IPSS Global has transformed the way we handle customer
+                        engagement. Their team is proactive, skilled, and always
+                        delivers beyond expectations.”
                       </h3>
                       <div
                         class="body--font mt-2 mb-[30px] md:mb-0 md:max-w-[638px] md:text-20 xl:max-w-[733px] xl:text-24"
-                        style="font-size: {{ settings.body_font_size.size }}{{ settings.body_font_size.unit }}; line-height:1.3;"
+                        style="line-height: 1.3"
                       >
-                        Our culture fosters empowerment, growth, and community.
-                        We’re focused on hiring the best people for every
-                        position from frontline agents and managers to our HR,
-                        sales, and IT staff.
+                        Ajay Singh, Co-Founder, EdTech Platform
                       </div>
-                      <video-player
-                        heading="Learn how IntouchCX got started, and why the same principles we were founded on drive our culture today."
-                        video-id="2dyueeathh"
-                        image="https://www.intouchcx.com/wp-content/uploads/2024/06/1.png"
-                        primary-cta-text="Apply Now"
-                        primary-cta-action="https://www.intouchcx.com/careers/"
-                        secondary-cta-text="Watch Video"
+                      <h3
+                        class="text-24 font-black md:text-40 2xl:text-80"
+                        style="margin-top: 4rem; line-height: 1.3"
                       >
-                      </video-player>
+                        “Thanks to IPSS, our customer satisfaction scores have
+                        improved dramatically. Their professionalism and
+                        adaptability are top-notch.”
+                      </h3>
+                      <div
+                        class="body--font mt-2 mb-[30px] md:mb-0 md:max-w-[638px] md:text-20 xl:max-w-[733px] xl:text-24"
+                        style="line-height: 1.3"
+                      >
+                        Vipul Kumar, Operations Head, Edtech Firm
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3070,224 +2963,127 @@
           </div>
         </div>
       </section>
+
       <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-e6046da elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="e6046da"
+        class="elementor-section elementor-top-section elementor-element elementor-element-74b7eb2 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+        data-id="74b7eb2"
         data-element_type="section"
       >
         <div class="elementor-container elementor-column-gap-default">
           <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1dde7a1"
-            data-id="1dde7a1"
+            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-441f33e"
+            data-id="441f33e"
             data-element_type="column"
           >
             <div class="elementor-widget-wrap elementor-element-populated">
               <div
-                class="elementor-element elementor-element-d1bba70 elementor-widget elementor-widget-ICXM07"
-                data-id="d1bba70"
+                class="elementor-element elementor-element-bfbf8c9 elementor-widget elementor-widget-ICXM21"
+                data-id="bfbf8c9"
                 data-element_type="widget"
-                data-widget_type="ICXM07.default"
+                data-widget_type="ICXM21.default"
               >
                 <div class="elementor-widget-container">
+                  <style>
+                    @media (min-width: 1280px) {
+                      .xl\:shrink-0 {
+                        flex-shrink: 0;
+                      }
+                    }
+
+                    @media (min-width: 1280px) {
+                      .xl\:w-\[17\.5\%\] {
+                        width: 17.5%;
+                      }
+                    }
+
+                    @media (min-width: 1280px) {
+                      .xl\:pt-\[120px\] {
+                        padding-top: 120px;
+                      }
+                    }
+
+                    @media (min-width: 1280px) {
+                      .xl\:flex {
+                        display: flex;
+                      }
+                    }
+                    .pb-\[52px\] {
+                      padding-bottom: 52px;
+                    }
+                    .pt-\[63px\] {
+                      padding-top: 63px;
+                    }
+                  </style>
                   <div
-                    class="cx-three-item-carousel pt-[50px] pb-[64px] md:py-[85px] xl:py-[140px] overflow-x-clip relative z-10 bg-deep-fir"
+                    id="case-study"
+                    class="px-6 md:px-16 xl:px-[8vw] md:pt-0 bg-deep-fir relative"
                   >
-                    <div
-                      class="px-6 md:px-16 xl:px-[8vw] flex flex-col text-spring-wood relative z-10"
-                    >
+                    <div>
                       <div
-                        class="subheading subheading--border self-start uppercase md:text-xl xl:text-2xl font-bold mb-[6px] xl:mb-4 leading-[1.5625]"
+                        class="pt-[63px] xl:pt-[120px] pb-[52px] xl:flex xl:space-x-[84px]"
                       >
-                        Insights
-                      </div>
-                      <h2
-                        class="text-2xl md:text-53 md:leading-[1.2] 2xl:text-80 font-black mb-2 md:mb-[10px] 2xl:mb-6 xl:w-[50vw]"
-                      >
-                        Delivering real-world results and insights.
-                      </h2>
-                      <div
-                        class="font-medium mb-[56px] 2xl:mb-[142px] md:text-xl 2xl:text-2xl xl:max-w-[733px]"
-                      >
-                        Stay up to date with our latest news to see how we're
-                        transforming customer service every day.
-                      </div>
-                    </div>
-                    <div class="item-carousel xl:px-[8vw]">
-                      <div class="swiper mb-[34px] md:mb-[50px] 2xl:mb-[114px]">
-                        <div class="swiper-wrapper text-spring-wood">
-                          <div class="swiper-slide">
-                            <a
-                              class="flex flex-col"
-                              href="thought-leadership/white-paper-how-ai-and-automation-transform-customer-experience-across-every-stage-of-the-customer-journey/index.html"
-                            >
-                              <img
-                                decoding="async"
-                                width="1024"
-                                height="580"
-                                src="wp-content/uploads/2025/03/AdobeStock_1066387703_1024x580.jpg"
-                                class="pointer-events-none mb-[9px] md:mb-[7px] 2xl:mb-6 self-start w-full wp-post-image"
-                                alt="White Paper: How AI and Automation Transform Customer Experience Across Every Stage of the Customer Journey"
-                                srcset="
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_1066387703_1024x580.jpg         1024w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_1066387703_1024x580-300x170.jpg  300w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_1066387703_1024x580-768x435.jpg  768w
-                                "
-                                sizes="(max-width: 1024px) 100vw, 1024px"
-                              />
-                              <time
-                                class="text-xs md:text-base italic leading-[1.41] md:leading-[2.375] font-bold mb-[2px] xl:mb-[6px]"
-                                datetime="2025-03-21 17:49:04"
-                                >March 21, 2025.</time
-                              >
-                              <h3
-                                class="text-xl md:text-[28px] 2xl:text-4xl font-bold mb-[9px] 2xl:mb-3"
-                              >
-                                White Paper: How AI and Automation Transform
-                                Customer Experience Across Every Stage of the
-                                Customer Journey
-                              </h3>
-                              <div
-                                class="hidden md:block md:mb-[9px] 2xl:mb-9 2xl:text-2xl 2xl:font-medium 2xl:leading-[1.17]"
-                              >
-                                Customer expectations are higher than
-                                ever—faster responses, personalized
-                                interactions, and effortless transitions across
-                                every touchpoint. [&hellip;]
-                              </div>
-                              <span
-                                class="hidden md:inline-block underline 2xl:text-2xl text-green"
-                                >Read more</span
-                              >
-                            </a>
+                        <div class="xl:w-[17.5%] xl:shrink-0">
+                          <img
+                            decoding="async"
+                            src="https://www.intouchcx.com/wp-content/uploads/2024/12/utilities-energy-home-case-study-desktop.png"
+                            alt="Client Details"
+                          />
+                        </div>
+                        <div>
+                          <h2
+                            class="heading--font mt-[64px] text-24 md:mt-[41px] md:text-53 xl:mt-0 2xl:text-80 text-spring-wood font-black max-w-[1112px]"
+                            style="line-height: 1.3"
+                          >
+                            Client Details
+                          </h2>
+                          <div
+                            class="body--font mt-[8px] md:text-20 md:mt-[10px] 2xl:text-24 2xl:mt-[29px] text-spring-wood"
+                            style="line-height: 1.3"
+                          >
+                            We proudly serve a global portfolio of startups and
+                            enterprises from the USA, UK, Australia, Canada, and
+                            India. Our valued clients span the EdTech, FinTech,
+                            Gaming, SaaS, and E-commerce sectors, all trusting
+                            IPSS Global as a reliable growth partner.
                           </div>
-                          <div class="swiper-slide">
-                            <a
-                              class="flex flex-col"
-                              href="thought-leadership/case-study-enhancing-metaverse-safety-with-scalable-moderation/index.html"
+                          <div
+                            class="mt-[38px] md:mt-[20px] 2xl:mt-[91px] grid grid-cols-1 xl:grid-cols-1"
+                          >
+                            <div
+                              class="flex flex-col items-center xl:justify-self-start z-10"
                             >
-                              <img
-                                decoding="async"
-                                width="1024"
-                                height="580"
-                                src="wp-content/uploads/2025/03/AdobeStock_911622703_EDITED_1024x580.jpg"
-                                class="pointer-events-none mb-[9px] md:mb-[7px] 2xl:mb-6 self-start w-full wp-post-image"
-                                alt="Case Study: Enhancing Metaverse Safety with Scalable Moderation"
-                                srcset="
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_911622703_EDITED_1024x580.jpg         1024w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_911622703_EDITED_1024x580-300x170.jpg  300w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_911622703_EDITED_1024x580-768x435.jpg  768w
-                                "
-                                sizes="(max-width: 1024px) 100vw, 1024px"
-                              />
-                              <time
-                                class="text-xs md:text-base italic leading-[1.41] md:leading-[2.375] font-bold mb-[2px] xl:mb-[6px]"
-                                datetime="2025-03-11 14:25:25"
-                                >March 11, 2025.</time
-                              >
-                              <h3
-                                class="text-xl md:text-[28px] 2xl:text-4xl font-bold mb-[9px] 2xl:mb-3"
-                              >
-                                Case Study: Enhancing Metaverse Safety with
-                                Scalable Moderation
-                              </h3>
                               <div
-                                class="hidden md:block md:mb-[9px] 2xl:mb-9 2xl:text-2xl 2xl:font-medium 2xl:leading-[1.17]"
+                                class="demo-counter nbr text-64 leading-tight font-black md:text-128 md:font-black 2xl:text-96 relative text-green"
                               >
-                                A Proactive Approach to Moderation in Virtual
-                                Reality&nbsp; The metaverse presents
-                                unparalleled opportunities for connection,
-                                [&hellip;]
+                                25,200+
                               </div>
-                              <span
-                                class="hidden md:inline-block underline 2xl:text-2xl text-green"
-                                >Read more</span
-                              >
-                            </a>
-                          </div>
-                          <div class="swiper-slide">
-                            <a
-                              class="flex flex-col"
-                              href="thought-leadership/case-study-empowering-support-teams-through-precision-hiring/index.html"
-                            >
-                              <img
-                                loading="lazy"
-                                decoding="async"
-                                width="1024"
-                                height="580"
-                                src="wp-content/uploads/2025/03/AdobeStock_479774160_EDIT_1024x580_SHA.jpg"
-                                class="pointer-events-none mb-[9px] md:mb-[7px] 2xl:mb-6 self-start w-full wp-post-image"
-                                alt="Case Study: Empowering Support Teams Through Precision Hiring"
-                                srcset="
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_479774160_EDIT_1024x580_SHA.jpg         1024w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_479774160_EDIT_1024x580_SHA-300x170.jpg  300w,
-                                  https://www.intouchcx.com/wp-content/uploads/2025/03/AdobeStock_479774160_EDIT_1024x580_SHA-768x435.jpg  768w
-                                "
-                                sizes="(max-width: 1024px) 100vw, 1024px"
-                              />
-                              <time
-                                class="text-xs md:text-base italic leading-[1.41] md:leading-[2.375] font-bold mb-[2px] xl:mb-[6px]"
-                                datetime="2025-03-04 16:36:43"
-                                >March 4, 2025.</time
-                              >
-                              <h3
-                                class="text-xl md:text-[28px] 2xl:text-4xl font-bold mb-[9px] 2xl:mb-3"
-                              >
-                                Case Study: Empowering Support Teams Through
-                                Precision Hiring
-                              </h3>
                               <div
-                                class="hidden md:block md:mb-[9px] 2xl:mb-9 2xl:text-2xl 2xl:font-medium 2xl:leading-[1.17]"
+                                class="font-medium leading-[1.56] text-spring-wood md:leading-none md:text-40 md:mt-2 xl:text-2xl"
                               >
-                                Our tailored solutions combine deep industry
-                                expertise with a consultative approach, that
-                                address the unique [&hellip;]
+                                product and service demos successfully delivered
+                                across global time zones, helping clients
+                                convert leads, showcase solutions, and
+                                close deals faster.
                               </div>
-                              <span
-                                class="hidden md:inline-block underline 2xl:text-2xl text-green"
-                                >Read more</span
-                              >
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="flex justify-center"></div>
                     </div>
-                    <img
-                      decoding="async"
-                      class="pointer-events-none hidden md:block xl:hidden absolute right-0 bottom-[-202px] xl:bottom-auto xl:top-[-192px] xl:right-[6vw] xl:w-[300px]"
-                      src="wp-content/themes/intouchcx/assets/images/widgets/icxm07/mogile_pack_graph05.png"
-                      alt="graphic"
-                    />
-                    <img
-                      decoding="async"
-                      class="pointer-events-none hidden xl:block absolute right-0 top-0"
-                      src="wp-content/themes/intouchcx/assets/images/widgets/icxm07/desk_pack_graph_03.svg"
-                      alt="graphic"
-                    />
-                    <img
-                      decoding="async"
-                      class="pointer-events-none hidden xl:block absolute left-[-78px] bottom-0"
-                      src="wp-content/themes/intouchcx/assets/images/widgets/icxm07/desk_wave_graph_27.svg"
-                      alt="graphic"
-                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
     </div>
     <footer
       class="relative overflow-hidden px-6 md:px-16 xl:px-[8vw] py-[64px] bg-deep-fir text-spring-wood md:grid md:grid-cols-2 xl:grid-cols-[308px_repeat(4,_minmax(0,_1fr))] md:gap-x-20 xl:gap-x-10 grid-flow-col xl:grid-rows-7"
     >
       <div class="mb-10 md:col-span-full xl:col-span-1 xl:row-start-1">
         <a href="/index.html">
-          <img
-            src="/assets/logo.svg"
-            alt="IntouchCX Logo"
-            class="w-[143px]"
-          />
+          <img src="/assets/logo.svg" alt="IntouchCX Logo" class="w-[143px]" />
         </a>
         <div class="mt-5 font-medium max-w-[445px]">
           IPSS Global Pvt Ltd combines industry expertise with AI and automation
@@ -3308,17 +3104,13 @@
                   id="menu-item-595"
                   class="menu-item menu-item-type-custom menu-item-object-custom menu-item-595"
                 >
-                  <a href="/about-us/index.html"
-                    >About Us</a
-                  >
+                  <a href="/about-us/index.html">About Us</a>
                 </li>
                 <li
                   id="menu-item-529"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"
                 >
-                  <a href="/industries/index.html"
-                    >Industries</a
-                  >
+                  <a href="/industries/index.html">Industries</a>
                 </li>
                 <li
                   id="menu-item-530"
@@ -3330,9 +3122,7 @@
                   id="menu-item-531"
                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-531"
                 >
-                  <a href="/partners/index.html"
-                    >Partners</a
-                  >
+                  <a href="/partners/index.html">Partners</a>
                 </li>
               </ul>
             </li>
@@ -3602,6 +3392,27 @@
       src="wp-includes/js/jquery/ui/core.minb37e.js"
       id="jquery-ui-core-js"
     ></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script type="text/javascript">
+      const counterUp = window.counterUp.default;
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+          if (entry.isIntersecting && !el.classList.contains("is-visible")) {
+            counterUp(el, {
+              duration: 5000,
+              delay: 50,
+            });
+            el.classList.add("is-visible");
+          }
+        });
+      };
+
+      const IO = new IntersectionObserver(callback, { threshold: 1 });
+
+      const el = document.querySelector(".demo-counter");
+      IO.observe(el);
+    </script>
     <script type="text/javascript" id="elementor-frontend-js-before">
       /* <![CDATA[ */ var elementorFrontendConfig = {
         environmentMode: {
